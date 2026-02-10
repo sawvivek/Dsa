@@ -1,0 +1,120 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: #f4f7fa;
+  color: #232323;
+}
+
+.container {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* Sidebar styles */
+.sidebar {
+  background: #22313f;
+  color: #fff;
+  width: 260px;
+  padding: 30px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-right: 4px solid #fbb034;
+}
+
+.profile-pic img {
+  width: 100px;
+  height: 100px;
+  border: 4px solid #fbb034;
+  border-radius: 50%;
+  margin-bottom: 15px;
+}
+
+.sidebar nav {
+  margin: 30px 0;
+  width: 100%;
+}
+
+.sidebar nav a {
+  display: block;
+  color: #ffd700;
+  text-decoration: none;
+  padding: 8px 0;
+  text-align: center;
+  font-weight: 500;
+  transition: background 0.3s, color 0.3s;
+}
+
+.sidebar nav a:hover {
+  background: #fbb034;
+  color: #22313f;
+  border-radius: 5px;
+}
+
+.contact-info {
+  margin-top: auto;
+  text-align: center;
+  font-size: 0.98em;
+}
+
+.contact-info h3 {
+  font-size: 1.1em;
+  margin-bottom: 7px;
+  color: #ffd700;
+}
+
+/* Main content styles */
+.main-content {
+  flex: 1;
+  padding: 40px 60px;
+}
+
+h2 {
+  color: #22313f;
+  font-family: 'Trebuchet MS', Arial, sans-serif;
+  border-bottom: 2px solid #fbb034;
+  margin-bottom: 14px;
+  padding-bottom: 4px;
+  font-size: 2em;
+  letter-spacing: 1px;
+}
+
+.section-content {
+  background: #fff;
+  border: 2px solid #e8e8e8;
+  border-radius: 10px;
+  padding: 18px 22px;
+  margin-bottom: 32px;
+  box-shadow: 0 2px 8px rgba(51,51,51,0.05);
+  font-size: 1.07em;
+  color: #495867;
+}
+
+.section-content ul {
+  list-style-type: disc;
+  margin-left: 24px;
+  padding-left: 0;
+}
+
+@media (max-width: 900px) {
+  .container {
+    flex-direction: column;
+  }
+  .sidebar {
+    width: 100%;
+    border-right: none;
+    border-bottom: 4px solid #fbb034;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 20px 10px;
+  }
+  .main-content {
+    padding: 18px 8px;
+  }
+}
