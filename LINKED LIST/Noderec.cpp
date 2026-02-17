@@ -1,6 +1,5 @@
 #include <iostream>
 using namespace std;
-
 class Node
 {
 public:
@@ -12,8 +11,7 @@ public:
         this->next = NULL;
     }
 };
-void Displayrec(Node *a)
-{
+void Displayrec(Node *a){
     Node *temp = a;
     if (temp == NULL)
         return;

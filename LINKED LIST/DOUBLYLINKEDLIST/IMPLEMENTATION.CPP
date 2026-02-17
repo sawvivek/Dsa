@@ -32,6 +32,20 @@ void reversed(Node *tail)
         cout << temp->val << " ";
         temp = temp->prev;
     }
+    cout << endl;
+}
+void displayAtAnyNode(Node *node)
+{
+    Node *temp = node;
+    while (temp->prev != NULL)
+    {
+        temp = temp->prev;
+    }
+    while (temp != NULL)
+    {
+        cout << temp->val << " ";
+        temp = temp->next;
+    }
 }
 int main()
 {
@@ -49,7 +63,8 @@ int main()
     c->prev = b;
     b->prev = a;
 
-    display(a);
-    reversed(e);
-    display(a);
+    // display(a);
+    // reversed(e);
+    // display(a);
+    displayAtAnyNode(c);
 }
