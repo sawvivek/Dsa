@@ -17,10 +17,25 @@ void print(stack<int> st)
     }
     cout << endl;
 }
-void pushAtBottom(stack<int> st, int val)
+void pushAtBottom(stack<int> &st, int val)
 {
     stack<int> help;
     while (st.size() > 0)
+    {
+        help.push(st.top());
+        st.pop();
+    }
+    st.push(val);
+    while (help.size() > 0)
+    {
+        st.push(help.top());
+        help.pop();
+    }
+}
+void pushAtAnyIndex(stack<int> &st, int idx, int val)
+{
+    stack<int> help;
+    while (st.size() > 2)
     {
         help.push(st.top());
         st.pop();
@@ -41,6 +56,8 @@ int main()
     st.push(40);
     st.push(50);
     print(st);
-
+    pushAtBottom(st, 80);
+    print(st);
+    pushAtAnyIndex(st, 2, 70);
     print(st);
 }
