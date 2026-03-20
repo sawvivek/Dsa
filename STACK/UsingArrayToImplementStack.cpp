@@ -13,7 +13,7 @@ public:
     {
         if (idx == 4)
         {
-            cout << "Stack is full" << endl;
+            cout << "Stack is full!" << endl;
             return;
         }
         idx++;
@@ -21,10 +21,20 @@ public:
     }
     void pop()
     {
+        if (idx == -1)
+        {
+            cout << "Stack is empty!" << endl;
+            return;
+        }
         idx--;
     }
     int top()
     {
+        if (idx == -1)
+        {
+            cout << "Stack is full" << endl;
+            return -1;
+        }
         return arr[idx];
     }
     int size()
