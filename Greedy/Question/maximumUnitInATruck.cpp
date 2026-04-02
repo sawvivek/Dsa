@@ -35,4 +35,8 @@ public:
 };
 int main()
 {
+    vector<vector<int>> boxTypes = {{1, 3}, {2, 2}, {3, 1}};
+    int truckSize = 4;
+    Solution s;
+    cout << s.maximumUnits(boxTypes, truckSize);
 }
